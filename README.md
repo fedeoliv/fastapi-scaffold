@@ -1,5 +1,11 @@
 # FastAPI Scaffold
 
+Core features:
+
+- [uv](https://docs.astral.sh/uv/) for package and project management;
+- App settings management and type validations from `.env` with [pydantic](https://pypi.org/project/pydantic/) and [pydantic-settings](https://pypi.org/project/pydantic-settings/);
+- FastAPI with app settings integrated into an API route via [dependency injection](https://fastapi.tiangolo.com/tutorial/dependencies/).
+
 ## Getting Started
 
 ### Prerequisites
