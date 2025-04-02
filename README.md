@@ -57,10 +57,12 @@ docker build -t fastapi-app .
 
 Run the container:
 
-```sh
-docker run -d --name fastapi-app-container -p 8000:80 fastapi-app
-```
+- Option 1: Run with the `.env` file:
+  ```sh
+  docker run --env-file .env --rm -d --name fastapi-app-container -p 8001:80 fastapi-app
+  ```
+- Option 2: Run by injecting env variables manually with `-e`:
 
-```
-
-```
+  ```sh
+  docker run -e MY_ENV=VALUE -e MY_OTHER_ENV=VALUE --rm -d --name fastapi-app-container -p 8001:80 fastapi-app
+  ```
